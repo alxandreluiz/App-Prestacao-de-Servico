@@ -12,8 +12,14 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ✅ ADICIONE ESTA LINHA
+// ✅ Servir arquivos estáticos (fotos)
+app.use('/uploads', express.static('uploads'));
+
+// Rotas
 app.use('/api/auth', require('./routes/auth'));
+app.use('/api/perfil', require('./routes/perfil'));
+app.use('/api/busca', require('./routes/busca'));
+app.use('/api/agendamentos', require('./routes/agendamentos')); // ✅ NOVA ROTA DE AGENDAMENTOS
 
 // Rota de teste
 app.get('/api/health', (req, res) => {
