@@ -1,0 +1,335 @@
+.agendamento-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agendamento-card {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.agendamento-card h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+/* PRESTADOR INFO */
+.prestador-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+}
+
+.foto-prestador {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.info-texto h2 {
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.info-texto p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* FORM */
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* CALENDÁRIO */
+.calendario-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.calendario {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendario label {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.react-calendar {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: inherit;
+  background: white;
+}
+
+.react-calendar button {
+  background: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 5px;
+  transition: all 0.2s;
+}
+
+.react-calendar button:hover {
+  background: #f0f0f0;
+}
+
+.react-calendar button.react-calendar__tile--active {
+  background: #667eea;
+  color: white;
+  font-weight: bold;
+}
+
+.horario-duracao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.horario-duracao .form-group {
+  margin-bottom: 0;
+}
+
+.data-selecionada {
+  background: #f0f7ff;
+  border-left: 4px solid #667eea;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.data-selecionada p {
+  margin: 0;
+  color: #333;
+  font-weight: 500;
+}
+
+/* RESUMO */
+.resumo {
+  background: #f8f9fa;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.resumo h3 {
+  margin-top: 0;
+  color: #333;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.resumo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+}
+
+.resumo-item:last-of-type {
+  border-bottom: none;
+}
+
+.resumo-item.total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  padding: 15px 0;
+  border-top: 2px solid #667eea;
+  border-bottom: none;
+}
+
+.resumo-item strong {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.resumo small {
+  display: block;
+  margin-top: 10px;
+  color: #999;
+  font-style: italic;
+}
+
+/* BOTÕES */
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: #ddd;
+  color: #333;
+}
+
+.btn-secondary:hover {
+  background: #ccc;
+  transform: translateY(-2px);
+}
+
+/* CARREGANDO */
+.carregando {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 18px;
+  color: #667eea;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .agendamento-card {
+    padding: 20px;
+  }
+
+  .agendamento-card h1 {
+    font-size: 24px;
+  }
+
+  .prestador-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .calendario-section {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .react-calendar {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendamento-container {
+    padding: 20px 10px;
+  }
+
+  .agendamento-card {
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  .resumo {
+    padding: 15px;
+  }
+}
